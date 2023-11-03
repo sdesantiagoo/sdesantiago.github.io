@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="estilo/estilo.css" rel="stylesheet" type:"text/css">
+    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/nexa-bold?styles=29919,29913" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    <title>Digital Content Access</title>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="imagenes/logo-claro.png" alt="dca"></div>
+    <div class="hamburgo">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="" class="active">INICIO</a>
+            </li>
+
+            <li>
+                <a href="">SERVICIOS</a>
+            </li>
+
+            <li>
+                <a href="">CONTACTAR</a>
+            </li>
+
+            <li>
+                <a href="">NOSOTROS</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    body{
+        background: #fffbf1;
+    }
+    header{
+        width: 100%;
+        height: 120px;
+        background: #16191e;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+    }.hamburgo{
+        display: none;
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .navbar ul li a{
+        display: block;
+        color: #fffbf1;
+        font-size: 17px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        transition: 0.2s;
+        margin: 0 5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .navbar ul li a:hover{
+        color:#16191e ;
+        background:#e3b675;
+    }
+    @media only screen and (max-width: 1320px){
+        header{
+            padding: 0 50px;
+        }
+    }
+    @media only screen and (max-width: 1100px){
+        header{
+            padding: 0 30px;
+        }
+    }
+    @media only screen and (max-width: 900px){
+        .hamburgo{
+            display: block;
+            cursor: pointer;
+        }
+        .hamburgo .line{
+            width: 30px;
+            height: 3px;
+            background-color: #fffbf1;
+            margin: 6px 0;
+        }
+        .navbar{
+            height: 0px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100vw;
+            background: #16191e;
+            transition: 0.2s;
+            overflow: hidden;
+        }
+        .navbar.active{
+            height: 450px;
+        }
+        .navbar ul{
+            display: block;
+            width: fit-content;
+            margin: 80px auto 0 auto;
+            text-align: center;
+            transition: 0.5s ;
+            opacity: 0;
+        }
+        .navbar.active ul{
+            opacity: 1;
+        }
+        .navbar ul li a{
+            margin-bottom: 12px;
+        
+        }
+    }
+    .banner {
+        display:flex;
+        width: 100%;
+        height: calc(93vh - 50px);
+        background-position: center;
+        background-size: cover;
+        background-image: url(../imagenes/Website-Design-Background.jpg)
+    }
+    .banner-content{
+        display:flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: #fff;
+        background-color: rgba(12, 33, 49, 0.65);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Nexa', sans-serif;
+    }
+    button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius:  25px;
+        font-weight: bold;
+        background: transparent;
+        border: 2px solid #e3b675;
+        color: #e3b675;
+        cursor: pointer;
+        font-family: 'Nexa', sans-serif;
+        font-size: 18px;
+    }
+    
+    button:hover{
+        color: #fffbf1;
+        background-color: #e3b675;
+        transition: all 0.6s ease 0s; 
+    }
+    .tx1{
+        font-family: 'Nexa', sans-serif;
+        color: #fffbf1;
+        font-weight: lighter;
+        font-size: 35px;
+    }
+    .tx2{
+        font-family: 'Nexa', sans-serif;
+        color: #fffbf1;
+        font-weight:bold;
+        font-size: 25px;
+    }
+    footer{
+        padding-top:50px ;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    .container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .footer-content p{
+        width: 190px;
+        margin: auto;
+        padding: 7px;
+        font-family: 'Nexa', sans-serif;
+        color: #16191e;
+        font-weight: bold;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        font-family: 'Nexa', sans-serif;
+        font-weight: bold;
+        color: #16191e;
+        font-size:16px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        font-size: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: #16191e;
+    }
+    a:hover{
+     color: #e3b675;
+    }
+    .social-icons i:hover{
+        color: #e3b675;
+    }
+    .barra{
+        background-color: #0d2132;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .barra p{
+        color:#fffbf1 ;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+</style>
+
+<script>
+    hamburgo=document.querySelector(".hamburgo");
+    hamburgo.onclick= function() {
+        navBar = document.querySelector(".navbar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+<section class="banner">
+    <div class="banner-content">
+        <div class="tx1">
+        <h1>Bienvenido a Digital Content Access</h1>
+        </div>
+
+        <div class="tx2">
+        <p>"Conceptos para poder crear"</p>
+        </div>
+
+        <div class="tx3">
+            <button type="button">Acceder Servicios</button>
+            <button type="button">Conoce de nostros</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <h3>Contactos</h3>
+            <p>Correo: dcaofficial23@gmail.com</p>
+            <p>Telefono: +57 319 2727254</p>
+            <p>Dirección: Paralela Calle 26, Teusaquillo, Bogotá</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick Links</h3>
+            <ul class="list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Contactar</a></li>
+                <li><a href="">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Redes Sociales</h3>
+            <ul class="social-icons">
+             <li><a href="https://www.facebook.com/profile.php?id=61551014890981&locale=es_LA"><i class="fa-brands fa-facebook"></i></a></li>
+             <li><a href="https://www.instagram.com/dcaoficial23/"><i class="fa-brands fa-instagram"></i></a></li>
+             <li><a href="https://www.youtube.com/@dca.official23"><i class="fa-brands fa-youtube"></i></a></li>
+             <li><a href="https://www.tiktok.com/@dcaoficial"><i class="fa-brands fa-tiktok"></i></a></li>
+             <li><a href="https://github.com/sdesantiagoo"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="barra">
+        <p>@ 2023 DCA .All rights reserved</p>
+    </div>
+</footer>
+</body>
+</html>
